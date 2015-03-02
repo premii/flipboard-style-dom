@@ -1,0 +1,167 @@
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Source Sans Pro', Helvetica Neue, Segoe UI, trebuchet MS, Arial, sans-serif;
+    line-height: 1.618;
+    color: #33393f;
+    -webkit-font-smoothing: antialiased;
+    font-size: inherit;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+a:focus,
+a:active {
+    outline: 0;
+}
+
+.theme-bg-lighter {
+    background: rgb(255, 251, 250);
+}
+
+.theme-bg-lighter-dark {
+    background: #fcf8f7;
+}
+
+.absolute,
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card {
+    xdisplay: none;
+}
+
+.scroll-swipe {
+    overflow: hidden;
+}
+
+.card .full-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+}
+
+.card .full-image .content {
+    top: auto;
+    padding: 15px;
+}
+
+.card .full-image .title {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.card .item-story .story-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    overflow: hidden;
+}
+
+.card .item-story-image .story-image {
+    position: absolute;
+    top: 0;
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    height: auto;
+    max-height: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.card .item-story-image .story-content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.card .item-index {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-style: normal;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #ddd;
+    z-index: 1;
+}
+
+.card .title {
+    font-size: 1.14rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.card .description {
+    margin-top: 5px;
+}
+
+.card .media-logo {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 10px;
+}
+
+.card .domain {
+    font-size: 1rem;
+    opacity: 0.7;
+    font-weight: 300;
+}
+
+.card .reddit-meta {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 15px;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.5);
+}

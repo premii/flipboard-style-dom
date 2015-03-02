@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="web">
+<head>
+    <meta charset="utf-8"/>
+    <script>t0 = +new Date();</script>
+    <title>Flipboard-style News Reader Using DOM</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0, minimal-ui">
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="format-detection" content="telephone=no"/>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-tap-highlight" content="no"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'
+          rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="touch absolute">
+    <div class="pages-container absolute">
+        <div class="page-stories absolute">
+            <div class="bd scroll-swipe absolute">
+                <ul class="list stories-list theme-border" id="stories-1425257657780">
+
+                    <li class="card">
+                        <div class="full-image absolute" style="background-image: url(http://imgur.com/wqk3RQ0.jpg);">
+                            <div class="content absolute"><h2 class="title">Flipboard-style news reader using DOM</h2>
+                                <h3>Mobile only demo app</h3>
+                                <p>This app will download 40+ images. It will use roughly 27 MB of your bandwidth. Swipe up!</p>
+                                <span class="fleft"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="card theme-bg-lighter">
+                        <ul style="padding: 30px;">
+                            <li style="background: rgba(0, 0, 0, 0.1);">5th item image is 20 MB</li>
+                            <li>18th image is 2.3 MB</li>
+                            <li><span class="fleft"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">1</em>
+
+                            <div class="story-image" style="background-image: url(https://usatmarkets.files.wordpress.com/2015/02/ap_earns_wal-mart_70926664.jpg?w=640);;">
+                                <div class="media-logo" style="background-image: url(http://1.gravatar.com/blavatar/befdce758272c600b8a8c3feb73757b9?s=114);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Investors brace for more 'Wal-Mart raises'
+                                <span class="domain">&nbsp; (americasmarkets.usatoday.com)</span></h3>
+
+                                <p class="description">Wal-Mart workers just scored a raise. Now retail investors are
+                                    wondering – are more pay hikes coming?</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkwwr"> <span class="fleft">7 hrs &nbsp;•&nbsp; 1218 points</span> <span class="fright">391 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">2</em>
+
+                            <div class="story-image" style="background-image: url(http://www.advocate.com/sites/advocate.com/files/PerkinsFerchax400.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">VA Refuses to Recognize Veteran’s Wife and
+                                Child <span class="domain">&nbsp; (advocate.com)</span></h3>
+
+                                <p class="description">The Department of Veterans Affairs has frozen the disabled
+                                    veteran’s benefits until she pays back the full amount the VA mistakenly awarded for
+                                    her wife and child.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkgn1"> <span class="fleft">9 hrs &nbsp;•&nbsp; 1849 points</span> <span class="fright">201 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">3</em>
+
+                            <div class="story-image" style="background-image: url(http://www.dailystar.com.lb/dailystar/Pictures/2015/03/01/209762_mainimg.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Iran says ready to let in Google, other
+                                Internet firms <span class="domain">&nbsp; (dailystar.com.lb)</span></h3>
+
+                                <p class="description">ran could allow Internet giants such as Google to operate in the
+                                    Islamic republic if they respect its 'cultural' rules, Fars news agency says</p>
+                            </div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkcxk"> <span class="fleft">10 hrs &nbsp;•&nbsp; 1372 points</span> <span class="fright">114 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">4</em>
+
+                            <div class="story-image" style="background-image: url(http://img.washingtonpost.com/news/the-intersect/wp-content/uploads/sites/32/2015/02/craig-brittian21.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Man who made thousands posting women’s stolen
+                                nudes goes after news sites that posted pictures of him <span class="domain">&nbsp; (washingtonpost.com)</span>
+                            </h3>
+
+                                <p class="description">Karma's a witch.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkggg"> <span class="fleft">9 hrs &nbsp;•&nbsp; 1214 points</span> <span class="fright">101 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">5</em>
+
+                            <div class="story-image" style="background-image: url(http://img.washingtonpost.com/rw/2010-2019/WashingtonPost/2015/02/25/Cops-Courts/Images/GQ7A45531415419026.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Private police carry guns and make arrests, and
+                                their ranks are swelling <span class="domain">&nbsp; (washingtonpost.com)</span></h3>
+
+                                <p class="description">The trend has raised concerns in Va. and elsewhere because they
+                                    often receive little training and oversight.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xl506"> <span class="fleft">6 hrs &nbsp;•&nbsp; 598 points</span> <span class="fright">119 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">6</em>
+
+                            <div class="story-image" style="background-image: url(https://tribktla.files.wordpress.com/2015/02/suicide-charges.jpg?w=640);;">
+                                <div class="media-logo" style="background-image: url(http://1.gravatar.com/blavatar/77bb48cc2507c6a01607fe346372a8be?s=114);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Teen Allegedly Coaxed Depressed Boyfriend Into
+                                Killing Himself; Tweets About Missing Him <span class="domain">&nbsp; (ktla.com)</span>
+                            </h3>
+
+                                <p class="description">A Massachusetts teenager was facing a charge of involuntary
+                                    manslaughter after allegedly encouraging her boyfriend to kill himself. Conrad Roy,
+                                    18, died of carbon monoxide poisoning while sitting i...</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xjpns"> <span class="fleft">16 hrs &nbsp;•&nbsp; 4172 points</span> <span class="fright">1566 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">7</em>
+
+                            <div class="story-image" style="background-image: url(http://l1.yimg.com/bt/api/res/1.2/rS8OP_qfZKV.dZ_NMukASg--/YXBwaWQ9eW5ld3M7aWw9cGxhbmU7cT03NTt3PTYwMA--/http://media.zenfs.com/en_us/News/Reuters/dougdendinger-e1425235175789.jpg);;">
+                                <div class="media-logo" style="background-image: url(http://l.yimg.com/os/mit/media/p/presentation/images/icons/default-apple-media-logo-tablet-high-1636137.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Video Exonerates Man Set Up By Louisiana Cops
+                                And Prosecutors <span class="domain">&nbsp; (news.yahoo.com)</span></h3>
+
+                                <p class="description">If not for cell phone video, 47-year-old disabled veteran Douglas
+                                    Dendinger could be going to prison — because of an apparent coordinated effort by
+                                    Washington Parish, La. cops and prosecutors who falsely accused him of battery and
+                                    witness intimidation. As New Orleans’ WWL reports, Dendinger’s two-year nightmare
+                                    began on Aug. 20, 2012, when he was paid $50 to serve a court summons on behalf of
+                                    his nephew against Bogalusa police officer Chad Cassard in a police brutality
+                                    lawsuit. Dendinger handed Cassard a white envelope containing the documents and says
+                                    he went on his way. A year after the incident, then-District Attorney Walter Reed
+                                    brought charges against Dendinger.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xlkmo"> <span class="fleft">3 hrs &nbsp;•&nbsp; 340 points</span> <span class="fright">32 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">8</em>
+
+                            <div class="story-image" style="background-image: url(http://cdn-jpg.si.com/sites/default/files/styles/si_gallery_slide/public/2015/02/27/high-school-locker-room-renovation.jpg);;">
+                                <div class="media-logo" style="background-image: url(http://www.si.com/sites/all/themes/custom/si_base/assets/images/apple-media-logo-114x114.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Wisconsin high school unveils its new locker
+                                rooms with a $662,000 price tag <span class="domain">&nbsp; (si.com)</span></h3>
+
+                                <p class="description">The school district provided about a third of the total money
+                                    required to renovate the girls and boys basketball facilities at Arrowhead high
+                                    school.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xk84j"> <span class="fleft">11 hrs &nbsp;•&nbsp; 798 points</span> <span class="fright">227 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">9</em>
+
+                            <div class="story-image" style="background-image: url(http://zdnet3.cbsistatic.com/hub/i/r/2015/02/25/e268847c-d8dc-469f-b10d-8aa3332ea5ae/thumbnail/770x578/10f89f1bdc803ece1db90fca0503bcb5/samsung-galaxy-s6-edge.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">&#8203;Samsung Galaxy S6 first look: The
+                                productivity edition | ZDNet <span class="domain">&nbsp; (zdnet.com)</span></h3>
+
+                                <p class="description">Samsung Galaxy S6 is designed to woo consumers from Apple's
+                                    iPhone juggernaut, but the electronics giant also has a big pitch to businesses.</p>
+                            </div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xl3xw"> <span class="fleft">6 hrs &nbsp;•&nbsp; 296 points</span> <span class="fright">200 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">10</em>
+
+                            <div class="story-image" style="background-image: url(https://cbsnewyork.files.wordpress.com/2015/02/sen_velmanette_montgomery_0224.jpg?w=625);;">
+                                <div class="media-logo" style="background-image: url(http://1.gravatar.com/blavatar/50e3ae7b1a37ec6f5f022661f15b5473?s=114);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Brooklyn Lawmaker Apologizes For 'White People
+                                Don't Eat The Way We Do' Remark <span class="domain">&nbsp; (newyork.cbslocal.com)</span></h3>
+
+                                <p class="description">A Brooklyn state senator apologized Tuesday for remarks invoking
+                                    the subject of race in a discussion about a Clinton Hill grocery store set to close
+                                    – and the possibility that a “boutique” grocery store that could replace it.</p>
+                            </div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xk483"> <span class="fleft">12 hrs &nbsp;•&nbsp; 779 points</span> <span class="fright">443 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">11</em>
+
+                            <div class="story-image" style="background-image: url(http://media.irishcentral.com/images/MI+Bill+O+Reilly+OReilly+Fox+News.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Bill O’Reilly admits he did not see “Irish
+                                terrorists kill” in Northern Ireland <span class="domain">&nbsp; (irishcentral.com)</span></h3>
+
+                                <p class="description">Fox News now clarifies he saw photographs not actual
+                                    violence.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xlz7k"> <span class="fleft">2 hrs &nbsp;•&nbsp; 125 points</span> <span class="fright">38 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story"><em class="item-index">12</em>
+
+                            <div class="story-content"><h3 class="title">The number of private police who carry guns and
+                                make arrests is rising fast in the US <span class="domain">&nbsp; (msn.com)</span></h3>
+                            </div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xl32s"> <span class="fleft">6 hrs &nbsp;•&nbsp; 252 points</span> <span class="fright">34 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">13</em>
+
+                            <div class="story-image" style="background-image: url(https://fortunedotcom.files.wordpress.com/2015/02/tyler.png?w=560);;">
+                                <div class="media-logo" style="background-image: url(http://1.gravatar.com/blavatar/dab01945b542bffb69b4f700d7a35f8f?s=114);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">How Apple lost $533 million to an 8th-grade
+                                dropout patent troll <span class="domain">&nbsp; (fortune.com)</span></h3>
+
+                                <p class="description">Apple rarely comments on legal matters, and when it does it
+                                    chooses its words carefully. So I read with interest the statement it issued after
+                                    it was ordered to pay $532.9 million to Smartflash LLC...</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xj24d"> <span class="fleft">21 hrs &nbsp;•&nbsp; 3457 points</span> <span class="fright">1383 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">14</em>
+
+                            <div class="story-image" style="background-image: url(http://static01.nyt.com/images/2015/03/01/world/RUSSIA/RUSSIA-facebookJumbo-v2.jpg);;">
+                                <div class="media-logo" style="background-image: url(http://static01.nyt.com/images/icons/ios-ipad-144x144.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Fear Envelops Russia After Killing of Putin
+                                Critic Boris Nemtsov <span class="domain">&nbsp; (nyti.ms)</span></h3>
+
+                                <p class="description">Before he was shot and killed, Mr. Nemtsov had met with an old
+                                    friend to discuss his latest research into what he said was dissembling and misdeeds
+                                    in the Kremlin.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkee3"> <span class="fleft">9 hrs &nbsp;•&nbsp; 381 points</span> <span class="fright">42 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">15</em>
+
+                            <div class="story-image" style="background-image: url(http://gray-uploads.s3.amazonaws.com/captures/C62/B2A/C62B2ACB07EB4DCE95160DA9FCA11660);;">
+                                <div class="media-logo" style="background-image: url(http://media.graytvinc.com/designimages/iOSBookmark.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">West Monroe Police Officer Jody LeDoux has
+                                pleaded not guilty in the shooting death of Raymond Keith Martinez <span class="domain">&nbsp; (knoe.com)</span>
+                            </h3>
+
+                                <p class="description">Video caught on camera the night of the shooting has been
+                                    released to the media. KNOE will share that video online this afternoon and during
+                                    our Thursday evening newscasts. A WARNING, the video posted on KNOE.COM is the
+                                    non-blurred version and is graphic.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xl030"> <span class="fleft">6 hrs &nbsp;•&nbsp; 196 points</span> <span class="fright">24 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">16</em>
+
+                            <div class="story-image" style="background-image: url(http://www.gannett-cdn.com/-mm-/340a43c68095e473a91d18fa29ab6b2153c2b055/c=0-350-576-674&amp;r=x453&amp;c=800x450/local/-/media/DetroitFreePress/2015/02/28/B9316429750Z.1_20150228190528_000_GPAA3C3UM.1-0.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">U-M fraternity's damage to ski resort now
+                                estimated at $430,000 <span class="domain">&nbsp; (freep.com)</span></h3>
+
+                                <p class="description">A weekend fraternity ski party gone wild damaged the resort's
+                                    reputation as well as property, says its general manager.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xjo3d"> <span class="fleft">17 hrs &nbsp;•&nbsp; 1076 points</span> <span class="fright">371 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">17</em>
+
+                            <div class="story-image" style="background-image: url(http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/2/27/1425060601164/08995691-c5d6-47df-b3fa-87474ff63d60-2060x1236.jpeg);;">
+                                <div class="media-logo" style="background-image: url(http://assets.guim.co.uk/images/favicons/451963ac2e23633472bf48e2856d3f04/152x152.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Dawn on Ceres: Nasa probe to enter dwarf
+                                planet's orbit <span class="domain">&nbsp; (theguardian.com)</span></h3>
+
+                                <p class="description">First-ever rendezvous with the largest object in the asteroid
+                                    belt separating Mars from Jupiter will reveal what Ceres is made of</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkhx4"> <span class="fleft">9 hrs &nbsp;•&nbsp; 224 points</span> <span class="fright">16 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">18</em>
+
+                            <div class="story-image" style="background-image: url(http://img.washingtonpost.com/news/morning-mix/wp-content/uploads/sites/21/2015/02/RTR4F0WJ.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">The Siberian crater saga is more widespread —
+                                and scarier — than anyone thought <span class="domain">&nbsp; (washingtonpost.com)</span></h3>
+
+                                <p class="description">There could be dozens of more Siberian craters out there.</p>
+                            </div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xk5dm"> <span class="fleft">11 hrs &nbsp;•&nbsp; 352 points</span> <span class="fright">54 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">19</em>
+
+                            <div class="story-image" style="background-image: url(http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2015/3/1/1425168857554/6b063a05-5ab9-45d2-85ee-1475b97df44d-620x372.jpeg);;">
+                                <div class="media-logo" style="background-image: url(http://assets.guim.co.uk/images/favicons/451963ac2e23633472bf48e2856d3f04/152x152.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Homan Square protesters demand answers over
+                                Chicago police 'black site' <span class="domain">&nbsp; (theguardian.com)</span></h3>
+
+                                <p class="description">Crowd gathers outside facility at centre of claims of
+                                    unconstitutional abuse with Anonymous and Black Lives Matter among the groups
+                                    present</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xledc"> <span class="fleft">4 hrs &nbsp;•&nbsp; 66 points</span> <span class="fright">8 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">20</em>
+
+                            <div class="story-image" style="background-image: url(http://cbsnews2.cbsistatic.com/hub/i/r/2015/02/27/83e20f15-f436-4ed8-9d9b-e0dde8ac77db/thumbnail/620x350/1f805d7121923be039375e5cc143ff31/sandymain.jpg);;">
+                                <div class="media-logo" style="background-image: url(http://cbsnews2.cbsistatic.com/fly/bundles/cbsnewscore/apple-media-logo.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">FEMA: Evidence of fraud in Hurricane Sandy
+                                reports <span class="domain">&nbsp; (cbsnews.com)</span></h3>
+
+                                <p class="description">FEMA official says he has seen evidence of fraud in engineering
+                                    reports used to deny thousands of Hurricane Sandy claims</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xknn6"> <span class="fleft">8 hrs &nbsp;•&nbsp; 131 points</span> <span class="fright">7 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">21</em>
+
+                            <div class="story-image" style="background-image: url(http://bloximages.newyork1.vip.townnews.com/kdhnews.com/content/tncms/assets/v3/editorial/9/80/980ee444-5ac7-11e4-9d50-0017a43b2370/54491c0874f7b.image.png);;"></div>
+                            <div class="story-content"><h3 class="title">Google’s artificial intelligence breakthrough
+                                may have huge impact <span class="domain">&nbsp; (kdhnews.com)</span></h3>
+
+                                <p class="description">Google researchers have created an algorithm that has a
+                                    human-like ability to learn, marking a significant breakthrough in the field of
+                                    artificial intelligence. In a paper published in Nature this week, the researchers
+                                    demonstrated that the algorithm could master many Atari video games better than
+                                    humans, simply through playing the game and learning from experience.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xk3jo"> <span class="fleft">12 hrs &nbsp;•&nbsp; 250 points</span> <span class="fright">54 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">22</em>
+
+                            <div class="story-image" style="background-image: url(http://i2.cdn.turner.com/cnnnext/dam/assets/150301092341-henry-gevorgyan-large-169.jpg);;">
+                                <div class="media-logo" style="background-image: url(http://i.cdn.turner.com/cnn/.e/img/3.0/global/misc/apple-media-logo.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Alleged 'street racer' surrenders after fatal
+                                hit-and-run in California - CNN.com <span class="domain">&nbsp; (cnn.com)</span></h3>
+
+                                <p class="description"></p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkilx"> <span class="fleft">9 hrs &nbsp;•&nbsp; 144 points</span> <span class="fright">55 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">23</em>
+
+                            <div class="story-image" style="background-image: url(http://i.cbc.ca/1.2944772.1423067697!/cpImage/httpImage/image.jpg_gen/derivatives/16x9_460/video-games-scholarship.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Harper government examines game-playing to
+                                motivate bureaucrats <span class="domain">&nbsp; (cbc.ca)</span></h3>
+
+                                <p class="description">An internal memo from the Privy Council Office, Prime Minister
+                                    Stephen Harper's department, sings the praises of "gamification," that is,
+                                    encouraging workers to play computer games each day.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xk3w5"> <span class="fleft">12 hrs &nbsp;•&nbsp; 201 points</span> <span class="fright">19 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">24</em>
+
+                            <div class="story-image" style="background-image: url(http://www.trbimg.com/img-54ee2c70/turbine/la-sci-sn-california-birds-lyme-disease-20150225);;">
+                                <div class="media-logo" style="background-image: url(http://www.trbas.com/jive/prod/common/images/lanews-apple-media-logo.1q2w3_9ffdb679907f116af126c65ff1edb27a.png);"></div>
+                            </div>
+                            <div class="story-content"><h3 class="title">Many California bird species host Lyme disease
+                                bacteria, study finds <span class="domain">&nbsp; (latimes.com)</span></h3>
+
+                                <p class="description">Ticks carrying the bacterium responsible for Lyme disease are
+                                    infesting Northern California’s birds and may be hitching rides on them into
+                                    suburban settings, according to a new UC Berkeley study.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkojo"> <span class="fleft">8 hrs &nbsp;•&nbsp; 93 points</span> <span class="fright">5 comments</span> </a></div>
+                    </li>
+                    <li class="card theme-bg-lighter">
+                        <div class="item-story-image"><em class="item-index">25</em>
+
+                            <div class="story-image" style="background-image: url(http://www.thelocal.se/userdata/images/article/e9feab7a3a992787b0a0cb06925bc64dfbbd9a2d95bc8a6ca91db97b25737606.jpg);;"></div>
+                            <div class="story-content"><h3 class="title">Malmö school 'too dangerous' for students - The
+                                Local <span class="domain">&nbsp; (thelocal.se)</span></h3>
+
+                                <p class="description">A secondary school in Malmö has been closed after the teachers'
+                                    union declared that it is too dangerous a place for students and teachers to attend
+                                    due to widespread violence and criminality.</p></div>
+                            <a class="reddit-meta theme-bg-lighter-dark clearfix" href="#/r/news/comments/2xkgze"> <span class="fleft">9 hrs &nbsp;•&nbsp; 112 points</span> <span class="fright">19 comments</span> </a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="getPrefixedProperty.js"></script>
+<script src="enablePanelSwipe.js"></script>
+
+<script>
+    var storiesContainer = document.querySelector('.scroll-swipe');
+    window.helper.enablePanelSwipe({
+        'scrollRegion': storiesContainer,
+        'children': storiesContainer.querySelectorAll('.card'),
+        'callback': function (panel) {
+            console.log('Complete: Last visible panel', panel);
+            console.log('fetch next set of items')
+        }
+    });
+</script>
+
+</body>
+</html>
+
