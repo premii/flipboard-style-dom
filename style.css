@@ -1,6 +1,7 @@
 
 html {
     font-size: 15px;
+    height: 100%;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     color: #33393f;
     -webkit-font-smoothing: antialiased;
     font-size: inherit;
+    height: 100%;
 }
 
 a {
@@ -35,6 +37,12 @@ a {
 a:focus,
 a:active {
     outline: 0;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .theme-bg-lighter {

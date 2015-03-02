@@ -141,7 +141,7 @@
         scrollableOptions.scrollRegion = option.scrollRegion;
         scrollableOptions.children = option.children;
         scrollableOptions.afterAnimationCallback = option.callback || function() {};
-        
+
         var swipeDirty = false,
             startXY,
             continueAnimation = 0,
