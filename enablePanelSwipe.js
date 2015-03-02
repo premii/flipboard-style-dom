@@ -100,16 +100,18 @@
                 if (i > 0) {
                     visibleItems[i - 1].style.display = 'block'; //previous item visible
                 }
-                item.style.display = 'block'; //current & next item is visible
+                item.style.display = 'block'; //make current item visible
             }
             else {
-                item.style.display = 'none';
+                item.style.display = 'none'; //all other hidden
             }
 
             if (i == visibleChildIndex + 1) {
+                item.style.display = 'block'; //make next item is visible
                 item.style[prefixedTransform] = 'translate3d(0, 100%, 0)';
             }
             else if (i == visibleChildIndex - 1) {
+                item.style.display = 'block'; //make previous item is visible
                 item.style[prefixedTransform] = 'translate3d(0, -100%, 0)';
             }
         }
@@ -139,8 +141,7 @@
         scrollableOptions.scrollRegion = option.scrollRegion;
         scrollableOptions.children = option.children;
         scrollableOptions.afterAnimationCallback = option.callback || function() {};
-
-
+        
         var swipeDirty = false,
             startXY,
             continueAnimation = 0,
