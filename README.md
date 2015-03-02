@@ -6,3 +6,5 @@ Flipboard-style news reader using DOM for mobile. 60FPS
 
 
 Demo: http://premii.com/play/flipboard-style-news/
+
+http://premii.github.io/flipboard-style-dom/
