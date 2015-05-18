@@ -61,12 +61,12 @@
         var animate = function () {
             //    console.log('animate()');
             var currentTime = Date.now(),
-                time = Math.min(1, ((currentTime - startTime) / duration)),
+                time = Math.min(1, (currentTime - startTime) / duration),
                 easedT = helper.easeOutQuad(time);
 
             frameCount++;
 
-            currentY = (easedT * (topPanelEndPosition - (topPanelStartPosition))) + topPanelStartPosition;
+            currentY = easedT * (topPanelEndPosition - topPanelStartPosition) + topPanelStartPosition;
 
             topPanel.style[prefixedTransform] = 'translate3d(0, ' + (currentY) + 'px, 0)';
 
